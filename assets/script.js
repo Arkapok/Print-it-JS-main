@@ -64,3 +64,16 @@ const slides = [
     //Génére les points dynamiquement
     const numberOfSlides = slides.length;
     createDots(numberOfSlides);
+
+	// Event Listeners pour les fleches
+    leftArrow.addEventListener('click', () => {
+      console.log('Left arrow clicked!');
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      console.log('Right arrow clicked!');
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    });
