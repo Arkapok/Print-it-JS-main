@@ -16,3 +16,14 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+
+	//HTML nécessaires pour le carrousel.
+	const bannerImage = document.querySelector('.banner-img');
+	const bannerTagline = document.querySelector('#banner p');
+	const leftArrow = document.querySelector('.arrow_left');
+	const rightArrow = document.querySelector('.arrow_right');
+	const dotsContainer = document.querySelector('.dots');
+
+	//Valeur initiale de 0.
+	let Index = 0;
