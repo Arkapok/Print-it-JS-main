@@ -78,22 +78,3 @@ const slides = [
       updateCarousel();
     });
 
-	// ** Fonction carrousel automatique
-    function autoAdvance() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateCarousel();
-    }
-
-  	// Intervalle diaporama automatique (toutes les 5 secondes)
-  	const intervalTime = 5000; // 5000 millisecondes = 5 secondes
-  	let slideshowInterval = setInterval(autoAdvance, intervalTime);
-
-  	// Pause du diaporama automatique au survol
-  	bannerImage.addEventListener('mouseover', () => {
-    	clearInterval(slideshowInterval);
-  	});
-
-  	// Reprendre le diaporama automatique lorsque vous ne survolez
- 	bannerImage.addEventListener('mouseout', () => {
-    	slideshowInterval = setInterval(autoAdvance, intervalTime);
-  	});
